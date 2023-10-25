@@ -1,0 +1,13 @@
+DirectoryIndex index.php
+
+# php_value auto_prepend_file 
+php_value auto_prepend_file "/xampp/htdocs/aswathi/autoload.php"
+
+Order Allow,Deny
+<FilesMatch "^index\.php$">
+Allow from all
+</FilesMatch>
+
+# prevent mime based attacks
+Header set X-Content-Type-Options "nosniff"
+
