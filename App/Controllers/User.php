@@ -109,7 +109,7 @@ class User{
         // Read and write for owner, read for everybody else
         if(move_uploaded_file($_FILES['file']['tmp_name'], '/var/store/'.$basefilename)){
 		        if(is_executable('/var/store/'.$basefilename)){
-		            chmod('/var/store/'.$basefilename, 0000);
+		            chmod('/var/store/'.$basefilename, 0644);
 		        }
 		      
 		        // rename file and save the extension in db if needed
